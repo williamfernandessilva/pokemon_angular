@@ -1,0 +1,31 @@
+<div class="mt-3">
+    <img [src]=""
+    width="300p"
+class="shadow-lg rounded">
+
+<div >
+    <img [src]="pegarImagemPokemon()" /><br />
+    <b>{{ pokemon }}</b
+    ><br />
+  </div>
+
+<div class="display-5">
+<p>Número:</p>
+<p>Nome:</p>
+<p>Altura:</p>
+<p>Peso:</p>
+<p>Habilidade:</p>
+</div>
+
+
+*ngFor="let pokemon of pokemonService.pokemons; index as i"
+[pokemon]="pokemon.name"
+[numero]="i + 1"
+
+<br><br>
+    <div class=" btn btn-primary" >
+        Próximo Pokemon
+        </div>
+
+
+</div>
